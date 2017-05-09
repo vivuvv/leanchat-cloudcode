@@ -97,6 +97,12 @@ function test(req, res) {
   res.send('ok');
 }
 
+function userlist(req,res){
+  var a=findAll(_User,0);
+  res.send(a);
+}
+app.get('/user',userlist);
+
 //if (mutil.isDevelopment()) {
   app.get('/convSignTest', convSignTest);
   app.get('/pushMessageTest', pushMessageTest);
