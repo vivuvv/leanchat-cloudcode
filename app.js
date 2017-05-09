@@ -97,11 +97,11 @@ function test(req, res) {
   res.send('ok');
 }
 
-if (mutil.isDevelopment()) {
+//if (mutil.isDevelopment()) {
   app.get('/convSignTest', convSignTest);
   app.get('/pushMessageTest', pushMessageTest);
   app.get('/test', test);
-}
+//}
 
 app.get('/convSign', convSign);
 app.get('/', convSign);
