@@ -98,7 +98,7 @@ function test(req, res) {
 }
 
 function userlist(req,res){
-  var a=mutil.findOne('User', null);
+  var a=mutil.findAll('_User', null);
   res.send(a);
 }
 app.get('/user',userlist);
